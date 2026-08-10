@@ -1,28 +1,54 @@
-# Azure AKS Enterprise Platform
+# Azure AKS Enterprise Application
 
-Enterprise Azure Kubernetes Service (AKS) platform demonstrating containerization, Kubernetes deployments, Azure Container Registry, GitHub Actions CI/CD, networking, and Azure Monitor.
+## Overview
 
-## Project Status
+This project demonstrates the deployment of a containerized Flask application to Microsoft Azure Kubernetes Service (AKS).
 
-🚧 In Development
+The application was developed locally, containerized with Docker, stored in Azure Container Registry (ACR), and deployed to an AKS cluster using Kubernetes manifests.
 
 ## Architecture
 
-The platform will use:
+GitHub
+↓
+Flask Application
+↓
+Docker
+↓
+Azure Container Registry
+↓
+Azure Kubernetes Service (AKS)
+↓
+Kubernetes Deployment
+↓
+Kubernetes Pod
+↓
+Azure LoadBalancer
+↓
+Public Application
 
+## Technologies Used
+
+- Microsoft Azure
 - Azure Kubernetes Service (AKS)
 - Azure Container Registry (ACR)
 - Docker
 - Kubernetes
-- GitHub Actions
-- Azure Monitor
+- Python
+- Flask
+- Azure CLI
+- kubectl
+- Git & GitHub
 
-## Repository Structure
+## Project Structure
 
 ```text
-app/                  Application source code
-k8s/                  Kubernetes manifests
-docs/                 Architecture and documentation
-screenshots/          Project evidence
-scripts/              Automation scripts
-.github/workflows/    GitHub Actions workflows
+azure-aks-enterprise/
+├── app/
+│   ├── app.py
+│   ├── Dockerfile
+│   └── requirements.txt
+├── k8s/
+│   ├── deployment.yaml
+│   └── service.yaml
+├── .gitignore
+└── README.md
