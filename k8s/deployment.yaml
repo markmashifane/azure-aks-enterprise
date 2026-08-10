@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azure-aks-enterprise
+  labels:
+    app: azure-aks-enterprise
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: azure-aks-enterprise
+  template:
+    metadata:
+      labels:
+        app: azure-aks-enterprise
+    spec:
+      containers:
+        - name: azure-aks-enterprise
+          image: aksenterpriseacr.azurecr.io/azure-aks-enterprise:1.0
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "256Mi"

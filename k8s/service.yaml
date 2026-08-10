@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: azure-aks-enterprise-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: azure-aks-enterprise
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
